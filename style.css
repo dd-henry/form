@@ -128,3 +128,25 @@ button{
     border-radius: .3rem;
 }
 
+
+@media (max-width: 1300px) {
+    form{
+        width: 80vw;
+    }
+    .minisec{
+        width: 80vw;
+    }
+
+}
+@media (max-width: 800px) {
+    #nav-img{
+        height: 4vh;
+        padding-left: 8vw;
+    }
+
+    form{
+        width: 80vw;
+    }
+
+}
+
