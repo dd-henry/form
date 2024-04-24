@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionar Banco</title>
+</head>
+<body>
+    <h1>Selecione um banco:</h1>
+    <select id="selectBanco">
+        <!-- Opções de banco serão inseridas aqui via JavaScript -->
+    </select>
+
+    <script>
+        // URL da API para obter a lista de bancos
+        const apiUrl = 'https://brasilapi.com.br/api/banks/v1';
+
+        // Função para obter os bancos da API e preencher o select
+        async function getBancos() {
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                const selectBanco = document.getElementById('selectBanco');
+
+                // Adicionar uma opção padrão
+                const defaultOption = document.createElement('option');
+                defaultOption.text = 'Selecione um banco';
+                defaultOption.value = '';
+                selectBanco.appendChild(defaultOption);
+
+                // Adicionar opções de banco ao select
+                data.forEach(banco => {
+                    const option = document.createElement('option');
+                    option.text = banco.name;
+                    option.value = banco.code;
+                    selectBanco.appendChild(option);
+                });
+            } catch (error) {
+                console.error('Erro ao obter bancos:', error);
+            }
+        }
+
+        // Chamar a função para obter os bancos ao carregar a página
+        document.addEventListener('DOMContentLoaded', getBancos);
+    </script>
+</body>
+</html>

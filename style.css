@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+body{
+    margin: 0 auto;
+    height: 100vh;
+    width: 100vw;
+    background: #FBB911;
+    font-family: "Quicksand", sans-serif;
+    overflow-x: hidden;
+
+}
+
+h1{
+    font-family: "Quicksand";
+    padding-top: 12vh;
+    padding-bottom: 7vh;
+    color: #ffffff;
+    font-size: 3.5rem;
+    text-align: center;
+    -webkit-text-stroke: black 1.5px;
+    
+}
+
+nav{
+   background: linear-gradient(170deg, rgb(0, 0, 0) 0%,rgba(132, 0, 117, 0) 100%);
+   border: none;; 
+   height: fit-content;
+   position: fixed;
+   top: 0;
+   width: 100vw;
+   padding: 1vh;
+}
+
+#nav-img{
+    height: 9vh;
+    padding-left: 8vw;
+}
+
+section{
+    width: 100vw;
+    display: grid;
+
+}
+
+form{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+}
+
+label{
+    color: #060668;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: fit-content;
+    margin-bottom: 1rem;
+}
+
+input{
+    font-weight: 600;
+    color: #060668;
+    height: 1.5rem;
+    margin-bottom: 2rem;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #060668;
+    outline: none;
+    width: 97%;
+}   
+
+input:not(:placeholder-shown){
+    background: none;
+}
+
+#bairro, #numero, #complemento, #cidade{
+    width: 94%;
+}
+
+#banco{
+    width: 98%;
+}
+
+
+.input-box{
+    display: flex;  
+    flex-direction: column;
+    width: 100%;
+}
+
+
+
+
+.minisec{
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+}
+
+#selectBanco{
+    width: 30vw;
+    align-self: center;
+    margin-top: .5rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    background: rgb(6,6,104);
+    background: radial-gradient(circle, rgba(6,6,104,1) 81%, rgba(2,97,172,1) 100%);
+    padding-left: 1.3rem;
+    color: #ffffff;
+    border-radius: .3rem;
+    margin-bottom: 3vh;
+}
+
+#selectBanco:focus{
+    background: rgb(6,6,104);
+    transition: 80ms ease-in;
+}
+
+button{
+    background: rgb(6,6,104);
+    background: radial-gradient(circle, rgba(6,6,104,1) 39%, rgba(2,97,172,1) 100%);
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: .6rem 3rem;
+    align-self: end;
+    border: none;
+    border-radius: .3rem;
+}
+
